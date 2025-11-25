@@ -25,11 +25,38 @@ st.set_page_config(
 )
 
 # --- Custom CSS for modern UI ---
+# st.markdown("""
+# <style>
+# html, body, [class*="css"] {
+#     color: #333333 !important;
+# }
+# .stCard {
+#     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+#     transition: 0.3s;
+#     border-radius: 10px;
+#     background-color: #ffffff;
+#     padding: 20px;
+#     margin-bottom: 20px;
+# }
+# .stCard:hover { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); }
+# h1,h2,h3,h4,h5,h6 { color: #2e3b4e; }
+# .stButton>button { background-color: #4CAF50; color: white; border-radius: 8px; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: 0.3s; }
+# .stButton>button:hover { background-color: #45a049; }
+# .score-correct { color: green; font-weight: bold; }
+# .score-incorrect { color: red; font-weight: bold; }
+# .stProgress > div > div { background-color: #4CAF50 !important; }
+# </style>
+# """, unsafe_allow_html=True)
+
+# --- Custom CSS for modern UI ---
 st.markdown("""
 <style>
-html, body, [class*="css"] {
+/* Reset all text colors to dark */
+* {
     color: #333333 !important;
 }
+
+/* Specific fixes for Streamlit components */
 .stCard {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -37,14 +64,66 @@ html, body, [class*="css"] {
     background-color: #ffffff;
     padding: 20px;
     margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
 }
-.stCard:hover { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); }
-h1,h2,h3,h4,h5,h6 { color: #2e3b4e; }
-.stButton>button { background-color: #4CAF50; color: white; border-radius: 8px; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: 0.3s; }
-.stButton>button:hover { background-color: #45a049; }
-.score-correct { color: green; font-weight: bold; }
-.score-incorrect { color: red; font-weight: bold; }
-.stProgress > div > div { background-color: #4CAF50 !important; }
+
+.stCard h3, .stCard h4, .stCard p, .stCard div {
+    color: #2e3b4e !important;
+}
+
+.stCard p {
+    color: #333333 !important;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Fix for all text elements */
+p, div, span, h1, h2, h3, h4, h5, h6 {
+    color: #333333 !important;
+}
+
+/* Fix for form labels */
+.stRadio label, .stTextInput label, .stFileUploader label {
+    color: #333333 !important;
+    font-weight: 500;
+}
+
+/* Button styles */
+.stButton>button { 
+    background-color: #4CAF50; 
+    color: white !important; 
+    border-radius: 8px; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+.stButton>button:hover { 
+    background-color: #45a049; 
+}
+
+/* Score styles */
+.score-correct { 
+    color: green !important; 
+    font-weight: bold; 
+}
+
+.score-incorrect { 
+    color: red !important; 
+    font-weight: bold; 
+}
+
+/* Progress bar */
+.stProgress > div > div { 
+    background-color: #4CAF50 !important; 
+}
+
+/* Info, success, error boxes */
+.stAlert, .stInfo, .stSuccess, .stWarning, .stError {
+    color: #333333 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
