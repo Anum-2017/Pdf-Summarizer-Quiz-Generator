@@ -272,17 +272,37 @@ p, div, span, label {
 }
 
 /* Tabs */
+# .stTabs [data-baseweb="tab"] {
+#     color: white !important;
+#     font-weight: bold !important;
+#     background-color: #eaeaea !important;
+#     border-radius: 10px 10px 0 0 !important;
+# }
+
+# .stTabs [aria-selected="true"] {
+#     background-color: #4CAF50 !important;
+#     color: #ffffff !important;
+# }
 .stTabs [data-baseweb="tab"] {
-    color: white !important;
-    font-weight: bold !important;
-    background-color: #eaeaea !important;
-    border-radius: 10px 10px 0 0 !important;
+    color: #2e3b4e !important;           /* Tab text color */
+    font-weight: bold !important;        /* Bold text */
+    background-color: #e0e0e0 !important; /* Light gray background */
+    border-radius: 10px 10px 0 0 !important; /* Rounded top corners */
+    padding: 8px 16px !important;       /* Padding inside tab */
+    transition: 0.3s;                   /* Smooth hover transition */
 }
 
-.stTabs [aria-selected="true"] {
-    background-color: #4CAF50 !important;
-    color: #ffffff !important;
+/* Hover effect for tabs */
+.stTabs [data-baseweb="tab"]:hover {
+    background-color: #d4d4d4 !important; /* Slightly darker gray on hover */
 }
+
+/* Selected tab */
+.stTabs [aria-selected="true"] {
+    background-color: #4CAF50 !important; /* Green background for active tab */
+    color: #ffffff !important;             /* White text for active tab */
+}
+
 
 /* Progress bar */
 .stProgress > div > div {
