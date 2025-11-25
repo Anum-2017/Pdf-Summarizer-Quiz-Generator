@@ -49,132 +49,247 @@ st.set_page_config(
 # """, unsafe_allow_html=True)
 
 # --- Custom CSS for modern UI ---
+# st.markdown("""
+# <style>
+# /* Reset complete UI colors */
+# * {
+#     color: #000000 !important;
+# }
+
+# /* Main app background */
+# .stApp {
+#     background-color: #ffffff !important;
+# }
+
+# /* All headings - pure black */
+# h1, h2, h3, h4, h5, h6 {
+#     color: #000000 !important;
+#     font-weight: bold !important;
+# }
+
+# /* All paragraphs and text */
+# p, div, span, label {
+#     color: #000000 !important;
+# }
+
+# /* Cards with dark text */
+# .stCard {
+#     background-color: #ffffff !important;
+#     border: 2px solid #e0e0e0 !important;
+#     border-radius: 10px !important;
+#     padding: 20px !important;
+# }
+
+# .stCard h3, .stCard h4 {
+#     color: #000000 !important;
+#     font-weight: bold !important;
+# }
+
+# .stCard p {
+#     color: #000000 !important;
+#     font-size: 16px !important;
+#     font-weight: 500 !important;
+# }
+
+# /* Radio buttons and labels */
+# .stRadio label {
+#     color: #000000 !important;
+#     font-weight: 600 !important;
+#     font-size: 16px !important;
+# }
+
+# .stRadio [data-testid="stMarkdownContainer"] {
+#     color: #000000 !important;
+# }
+
+# /* File uploader text */
+# .stFileUploader label {
+#     color: #000000 !important;
+#     font-weight: bold !important;
+# }
+
+# .stFileUploader section {
+#     border: 2px dashed #000000 !important;
+# }
+
+# .stFileUploader section div {
+#     color: #000000 !important;
+# }
+
+# /* Sidebar text */
+# .css-1d391kg h1, 
+# .css-1d391kg h2, 
+# .css-1d391kg h3,
+# .css-1d391kg p,
+# .css-1d391kg div,
+# .css-1d391kg span {
+#     color: #000000 !important;
+#     font-weight: 600 !important;
+# }
+
+# /* Instructions text */
+# [data-testid="stMarkdownContainer"] {
+#     color: #000000 !important;
+# }
+
+# /* Info boxes */
+# .stInfo, .stSuccess, .stAlert {
+#     background-color: #f0f8ff !important;
+#     border: 1px solid #000000 !important;
+#     color: #000000 !important;
+# }
+
+# .stInfo p, .stInfo div {
+#     color: #000000 !important;
+#     font-weight: 600 !important;
+# }
+
+# /* Buttons */
+# .stButton>button {
+#     background-color: #4CAF50 !important;
+#     color: white !important;
+#     border: 2px solid #4CAF50 !important;
+#     font-weight: bold !important;
+# }
+
+# .stButton>button:hover {
+#     background-color: #45a049;  !important;
+#     border-color: #45a049;  !important;
+# }
+
+# /* Tabs */
+# .stTabs [data-baseweb="tab"] {
+#     color: #000000 !important;
+#     font-weight: bold !important;
+#     background-color: #f0f0f0 !important;
+# }
+
+# .stTabs [aria-selected="true"] {
+#     background-color: #000000 !important;
+#     color: #ffffff !important;
+# }
+
+# /* Progress bar */
+# .stProgress > div > div {
+#     background-color: #000000 !important;
+# }
+
+# /* Score colors */
+# .score-correct {
+#     color: #006400 !important;
+#     font-weight: bold !important;
+# }
+
+# .score-incorrect {
+#     color: #8b0000 !important;
+#     font-weight: bold !important;
+# }
+
+# /* Force all Streamlit text containers */
+# [class*="st"], 
+# [data-testid*="st"],
+# div[class*="element-container"] {
+#     color: #000000 !important;
+# }
+
+# /* Specific fix for upload area text */
+# section[data-testid="stFileUploader"] div {
+#     color: #000000 !important;
+#     font-weight: bold !important;
+# }
+
+# section[data-testid="stFileUploader"] span {
+#     color: #000000 !important;
+#     font-weight: bold !important;
+# }
+# </style>
+# """, unsafe_allow_html=True)
+# --- Custom CSS for modern and sleek UI ---
 st.markdown("""
 <style>
-/* Reset complete UI colors */
-* {
-    color: #000000 !important;
-}
-
 /* Main app background */
 .stApp {
-    background-color: #ffffff !important;
+    background-color: #f9f9f9 !important;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* All headings - pure black */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-    color: #000000 !important;
+    color: #2e3b4e !important;
     font-weight: bold !important;
 }
 
-/* All paragraphs and text */
+/* Paragraphs */
 p, div, span, label {
-    color: #000000 !important;
+    color: #2e3b4e !important;
+    font-size: 16px !important;
 }
 
-/* Cards with dark text */
+/* Cards */
 .stCard {
     background-color: #ffffff !important;
-    border: 2px solid #e0e0e0 !important;
-    border-radius: 10px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1) !important;
     padding: 20px !important;
+    margin-bottom: 20px !important;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.stCard h3, .stCard h4 {
-    color: #000000 !important;
-    font-weight: bold !important;
-}
-
-.stCard p {
-    color: #000000 !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-}
-
-/* Radio buttons and labels */
-.stRadio label {
-    color: #000000 !important;
-    font-weight: 600 !important;
-    font-size: 16px !important;
-}
-
-.stRadio [data-testid="stMarkdownContainer"] {
-    color: #000000 !important;
-}
-
-/* File uploader text */
-.stFileUploader label {
-    color: #000000 !important;
-    font-weight: bold !important;
-}
-
-.stFileUploader section {
-    border: 2px dashed #000000 !important;
-}
-
-.stFileUploader section div {
-    color: #000000 !important;
-}
-
-/* Sidebar text */
-.css-1d391kg h1, 
-.css-1d391kg h2, 
-.css-1d391kg h3,
-.css-1d391kg p,
-.css-1d391kg div,
-.css-1d391kg span {
-    color: #000000 !important;
-    font-weight: 600 !important;
-}
-
-/* Instructions text */
-[data-testid="stMarkdownContainer"] {
-    color: #000000 !important;
-}
-
-/* Info boxes */
-.stInfo, .stSuccess, .stAlert {
-    background-color: #f0f8ff !important;
-    border: 1px solid #000000 !important;
-    color: #000000 !important;
-}
-
-.stInfo p, .stInfo div {
-    color: #000000 !important;
-    font-weight: 600 !important;
+.stCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
 }
 
 /* Buttons */
 .stButton>button {
     background-color: #4CAF50 !important;
     color: white !important;
-    border: 2px solid #4CAF50 !important;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    font-size: 16px !important;
     font-weight: bold !important;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .stButton>button:hover {
-    background-color: #45a049;  !important;
-    border-color: #45a049;  !important;
+    background-color: #45a049 !important;
+}
+
+/* File uploader */
+.stFileUploader section {
+    border: 2px dashed #2e3b4e !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    background-color: #fdfdfd !important;
+}
+
+/* Sidebar */
+.css-1d391kg {
+    color: #2e3b4e !important;
+    font-weight: 600 !important;
 }
 
 /* Tabs */
 .stTabs [data-baseweb="tab"] {
-    color: #000000 !important;
+    color: #2e3b4e !important;
     font-weight: bold !important;
-    background-color: #f0f0f0 !important;
+    background-color: #eaeaea !important;
+    border-radius: 8px 8px 0 0 !important;
 }
 
 .stTabs [aria-selected="true"] {
-    background-color: #000000 !important;
+    background-color: #4CAF50 !important;
     color: #ffffff !important;
 }
 
 /* Progress bar */
 .stProgress > div > div {
-    background-color: #000000 !important;
+    background-color: #4CAF50 !important;
 }
 
-/* Score colors */
+/* Correct / incorrect answers */
 .score-correct {
     color: #006400 !important;
     font-weight: bold !important;
@@ -184,26 +299,9 @@ p, div, span, label {
     color: #8b0000 !important;
     font-weight: bold !important;
 }
-
-/* Force all Streamlit text containers */
-[class*="st"], 
-[data-testid*="st"],
-div[class*="element-container"] {
-    color: #000000 !important;
-}
-
-/* Specific fix for upload area text */
-section[data-testid="stFileUploader"] div {
-    color: #000000 !important;
-    font-weight: bold !important;
-}
-
-section[data-testid="stFileUploader"] span {
-    color: #000000 !important;
-    font-weight: bold !important;
-}
 </style>
 """, unsafe_allow_html=True)
+
 
 # --- Session State Initialization ---
 for key in ['pdf_file_name', 'pdf_text_content', 'pdf_db_id', 'summary_text', 
