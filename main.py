@@ -84,7 +84,7 @@ p, div, span, h1, h2, h3, h4, h5, h6 {
 
 /* Fix for form labels */
 .stRadio label, .stTextInput label, .stFileUploader label {
-    color: #333333 !important;
+    color: white !important;
     font-weight: 500;
 }
 
