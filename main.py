@@ -27,6 +27,9 @@ st.set_page_config(
 # --- Custom CSS for modern UI ---
 st.markdown("""
 <style>
+html, body, [class*="css"] {
+    color: #2e3b4e !important;
+}
 .stCard {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
