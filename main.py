@@ -283,6 +283,7 @@ p, div, span, label {
 #     background-color: #4CAF50 !important;
 #     color: #ffffff !important;
 # }
+
 .stTabs [data-baseweb="tab"] {
     color: #2e3b4e !important;           /* Tab text color */
     font-weight: bold !important;        /* Bold text */
@@ -301,6 +302,11 @@ p, div, span, label {
 .stTabs [aria-selected="true"] {
     background-color: #4CAF50 !important; /* Green background for active tab */
     color: #ffffff !important;             /* White text for active tab */
+}
+
+* --- Buttons Styling --- */
+.stButton>button {
+    color: #ffffff !important;             /* White text for buttons */
 }
 
 
