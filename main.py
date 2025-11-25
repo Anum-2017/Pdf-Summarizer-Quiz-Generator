@@ -28,7 +28,7 @@ st.set_page_config(
 st.markdown("""
 <style>
 html, body, [class*="css"] {
-    color: #2e3b4e !important;
+    color: #333333 !important;
 }
 .stCard {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
