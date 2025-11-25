@@ -146,15 +146,15 @@ p, div, span, label {
 
 /* Buttons */
 .stButton>button {
-    background-color: #000000 !important;
-    color: #ffffff !important;
+    background-color: #4CAF50 !important;
+    color: white !important;
     border: 2px solid #000000 !important;
     font-weight: bold !important;
 }
 
 .stButton>button:hover {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
+    background-color: #45a049;  !important;
+    border-color: #45a049;  !important;
 }
 
 /* Tabs */
