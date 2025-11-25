@@ -148,7 +148,7 @@ p, div, span, label {
 .stButton>button {
     background-color: #4CAF50 !important;
     color: white !important;
-    border: 2px solid #000000 !important;
+    border: 2px solid #4CAF50 !important;
     font-weight: bold !important;
 }
 
