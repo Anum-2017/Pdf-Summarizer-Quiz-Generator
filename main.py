@@ -51,78 +51,156 @@ st.set_page_config(
 # --- Custom CSS for modern UI ---
 st.markdown("""
 <style>
-/* Reset all text colors to dark */
+/* Reset complete UI colors */
 * {
-    color: #333333 !important;
+    color: #000000 !important;
 }
 
-/* Specific fixes for Streamlit components */
+/* Main app background */
+.stApp {
+    background-color: #ffffff !important;
+}
+
+/* All headings - pure black */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+/* All paragraphs and text */
+p, div, span, label {
+    color: #000000 !important;
+}
+
+/* Cards with dark text */
 .stCard {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10px;
-    background-color: #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    background-color: #ffffff !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
 }
 
-.stCard h3, .stCard h4, .stCard p, .stCard div {
-    color: #2e3b4e !important;
+.stCard h3, .stCard h4 {
+    color: #000000 !important;
+    font-weight: bold !important;
 }
 
 .stCard p {
-    color: #333333 !important;
-    font-size: 16px;
-    line-height: 1.5;
+    color: #000000 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
 }
 
-/* Fix for all text elements */
-p, div, span, h1, h2, h3, h4, h5, h6 {
-    color: #333333 !important;
+/* Radio buttons and labels */
+.stRadio label {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
 }
 
-/* Fix for form labels */
-.stRadio label, .stTextInput label, .stFileUploader label {
-    color: white !important;
-    font-weight: 500;
+.stRadio [data-testid="stMarkdownContainer"] {
+    color: #000000 !important;
 }
 
-/* Button styles */
-.stButton>button { 
-    background-color: #4CAF50; 
-    color: white !important; 
-    border-radius: 8px; 
-    border: none; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    cursor: pointer; 
-    transition: 0.3s; 
+/* File uploader text */
+.stFileUploader label {
+    color: #000000 !important;
+    font-weight: bold !important;
 }
 
-.stButton>button:hover { 
-    background-color: #45a049; 
+.stFileUploader section {
+    border: 2px dashed #000000 !important;
 }
 
-/* Score styles */
-.score-correct { 
-    color: green !important; 
-    font-weight: bold; 
+.stFileUploader section div {
+    color: #000000 !important;
 }
 
-.score-incorrect { 
-    color: red !important; 
-    font-weight: bold; 
+/* Sidebar text */
+.css-1d391kg h1, 
+.css-1d391kg h2, 
+.css-1d391kg h3,
+.css-1d391kg p,
+.css-1d391kg div,
+.css-1d391kg span {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* Instructions text */
+[data-testid="stMarkdownContainer"] {
+    color: #000000 !important;
+}
+
+/* Info boxes */
+.stInfo, .stSuccess, .stAlert {
+    background-color: #f0f8ff !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.stInfo p, .stInfo div {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #000000 !important;
+    font-weight: bold !important;
+}
+
+.stButton>button:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab"] {
+    color: #000000 !important;
+    font-weight: bold !important;
+    background-color: #f0f0f0 !important;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #000000 !important;
+    color: #ffffff !important;
 }
 
 /* Progress bar */
-.stProgress > div > div { 
-    background-color: #4CAF50 !important; 
+.stProgress > div > div {
+    background-color: #000000 !important;
 }
 
-/* Info, success, error boxes */
-.stAlert, .stInfo, .stSuccess, .stWarning, .stError {
-    color: #333333 !important;
+/* Score colors */
+.score-correct {
+    color: #006400 !important;
+    font-weight: bold !important;
+}
+
+.score-incorrect {
+    color: #8b0000 !important;
+    font-weight: bold !important;
+}
+
+/* Force all Streamlit text containers */
+[class*="st"], 
+[data-testid*="st"],
+div[class*="element-container"] {
+    color: #000000 !important;
+}
+
+/* Specific fix for upload area text */
+section[data-testid="stFileUploader"] div {
+    color: #000000 !important;
+    font-weight: bold !important;
+}
+
+section[data-testid="stFileUploader"] span {
+    color: #000000 !important;
+    font-weight: bold !important;
 }
 </style>
 """, unsafe_allow_html=True)
