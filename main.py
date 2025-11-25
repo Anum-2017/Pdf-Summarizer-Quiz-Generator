@@ -273,10 +273,10 @@ p, div, span, label {
 
 /* Tabs */
 .stTabs [data-baseweb="tab"] {
-    color: #2e3b4e !important;
+    color: white !important;
     font-weight: bold !important;
     background-color: #eaeaea !important;
-    border-radius: 8px 8px 0 0 !important;
+    border-radius: 10px 10px 0 0 !important;
 }
 
 .stTabs [aria-selected="true"] {
