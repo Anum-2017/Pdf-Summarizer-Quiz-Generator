@@ -87,7 +87,7 @@ p, div, span, label {
 
 /* Sidebar */
 .css-1d391kg {
-    color: #2e3b4e !important;
+    color: #ffffff !important;
     font-weight: 600 !important;
 }
 
